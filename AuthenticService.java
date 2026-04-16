@@ -1,26 +1,17 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
+public class AuthService {
 
-public class Tea05Test {
-    
-    @Test
-    public void testStockReduction() {
-        OrderManager om = new OrderManager();
-        int initialStock = om.getMenu().get(0).getStock(); // 10
-        om.processSale(0);
-        assertEquals(initialStock - 1, om.getMenu().get(0).getStock());
-    }
+    private User[] users = {
+        new User("admin", "1234", "MANAGER"),
+        new User("cashier", "1111", "CASHIER")
+    };
 
-    @Test
-    public void testOutOfStockWarning() {
-        // Create a product with 0 stock
-        Product p = new Product("Empty Tea", 5.0, 0);
-        assertTrue(p.getStock() == 0);
+    public User login(String username, String password) {
+        for (User u : users) {
+            if (u.getUsername().equals(username) &&
+                u.getPassword().equals(password)) {
+                return u;
+            }
+        }
+        return null;
     }
 }
-
-// public class AuthenticService {
-//     public boolean login(String username, String password) {
-//         User user = 
-//     }
-// }
