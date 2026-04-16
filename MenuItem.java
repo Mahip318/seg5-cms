@@ -10,9 +10,15 @@ public class MenuItem {
     }
 
     // Getters and Setters
-    public String getName() { return name; }
-    public double getPrice() { return price; }
-    public int getStock() { return stock; }
+    public String getName() { 
+        return name; 
+    }
+    public double getPrice() { 
+        return price; 
+    }
+    public int getStock() { 
+        return stock; 
+    }
 
     public void setName(String name) {
         this.name = name;
