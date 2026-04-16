@@ -1,4 +1,18 @@
 public class MenuItem {
     private String name;
     private double price;
+    private int stock;
+
+    public MenuItem(String name, double price, int stock) {
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+    }
+
+    // Getters and Setters
+    public String getName() { return name; }
+    public double getPrice() { return price; }
+    public int getStock() { return stock; }
+    
+    public void reduceStock(int qty) { this.stock -= qty; }
 }
