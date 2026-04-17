@@ -1,10 +1,22 @@
-public class YourOrder {
-    private List<OrderItem> items;
-    private double total;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void calculateTotal() {
-        total = items.stream()
-                .mapToDouble(item -> item.getPrice() * item.getQuantity())
-                .sum();
-        }
+public class YourOrder {
+    private List<OrderItem> items = new ArrayList<>();
+
+    public void addItem(OrderItem item) {
+        items.add(item);
     }
+
+    public List<OrderItem> getItems() {
+        return List.copyOf(items);
+    }
+
+    public double getTotal() {
+        double total = 0;
+        for (OrderItem i : items) {
+            total += i.getTotal();
+        }
+        return total;
+    }
+}
