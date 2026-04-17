@@ -23,5 +23,4 @@ Tea05 is a specialized POS and Inventory Management System designed for local te
 
 ## How to Run the Prototype
 1. Clone the repo: 
-2. Import database into your local MySQL instance.
-3. Run `main()` in `Tea05Prototype.java`.
+2. Run `main()` in `Tea05Prototype.java`.
